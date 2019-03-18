@@ -143,6 +143,16 @@ body {
     font-size: 50px;
 }
 
+.swiper-container {
+    width: 100%;
+}
+
+.swiper-slide {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+}
+
 .swiper-pagination-bullet-active {
     background: #fff !important;
 }
