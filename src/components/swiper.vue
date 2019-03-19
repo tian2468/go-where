@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <swiper :options="swiperOption">
+    <swiper :options="swiperOption" v-if="swiperLength">
       <swiper-slide v-for="(item,index) in bannerList" :key="index" :id="item.id">
         <img :src="item.imgUrl" alt>
       </swiper-slide>
@@ -11,6 +11,9 @@
 <script>
 export default {
   name: "homeSwiper",
+  props: {
+    bannerList: Array
+  },
   data() {
     return {
       swiperOption: {
@@ -18,28 +21,19 @@ export default {
           el: ".swiper-pagination"
         },
         loop: true
-      },
-      bannerList: [
-        {
-          id: "001",
-          imgUrl: require("../assets/img/banner1.jpg")
-        },
-        {
-          id: "002",
-          imgUrl: require("../assets/img/banner2.png")
-        },
-        {
-          id: "003",
-          imgUrl: require("../assets/img/banner3.jpg")
-        }
-      ]
+      }
     };
+  },
+  computed: {
+    swiperLength() {
+      return this.bannerList.length;
+    }
   }
 };
 </script>
 <style scoped lang="scss">
-@import "../assets/style/mixin.scss";
 .wrapper {
+  margin-top: 0.86rem;
   width: 100%;
   height: 3rem;
   .swiper-slide {

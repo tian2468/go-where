@@ -8,13 +8,21 @@
       <span>请输入城市/景点/游玩主题</span>
     </div>
     <div class="arrow">
-      城市
+      {{this.city}}
       <span class="iconfont">&#xe615;</span>
     </div>
   </div>
 </template>
 <script>
-export default {};
+export default {
+  props: {
+    city: String
+  },
+  data() {
+    return {
+    };
+  }
+};
 </script>
 <style scoped lang="scss">
 @import "../assets/style/varibles.scss";
@@ -26,6 +34,10 @@ export default {};
   display: flex;
   justify-content: center;
   align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
   .back {
     width: 0.8rem;
     height: 100%;

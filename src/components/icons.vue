@@ -14,66 +14,12 @@
 <script>
 export default {
   name: "HomeIcons",
+  props: {
+    iconList: Array
+  },
   data() {
     return {
-      swiperOption: {},
-      iconList: [
-        {
-          id: 1,
-          imgUrl: require("../assets/img/icon/1.png"),
-          msg: "联系人"
-        },
-        {
-          id: 2,
-          imgUrl: require("../assets/img/icon/2.png"),
-          msg: "coffee"
-        },
-        {
-          id: 3,
-          imgUrl: require("../assets/img/icon/3.png"),
-          msg: "家电"
-        },
-        {
-          id: 4,
-          imgUrl: require("../assets/img/icon/4.png"),
-          msg: "娱乐"
-        },
-        {
-          id: 5,
-          imgUrl: require("../assets/img/icon/5.png"),
-          msg: "音乐"
-        },
-        {
-          id: 6,
-          imgUrl: require("../assets/img/icon/6.png"),
-          msg: "问题"
-        },
-        {
-          id: 7,
-          imgUrl: require("../assets/img/icon/7.png"),
-          msg: "时间"
-        },
-        {
-          id: 8,
-          imgUrl: require("../assets/img/icon/8.png"),
-          msg: "宠物"
-        },
-        {
-          id: 9,
-          imgUrl: require("../assets/img/icon/8.png"),
-          msg: "宠物"
-        },
-        {
-          id: 10,
-          imgUrl: require("../assets/img/icon/8.png"),
-          msg: "宠物"
-        },
-        {
-          id: 1,
-          imgUrl: require("../assets/img/icon/1.png"),
-          msg: "联系人"
-        }
-      ]
+      swiperOption: {}
     };
   },
   computed: {
