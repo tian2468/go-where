@@ -1,0 +1,125 @@
+{
+    "success": 200,
+    "city": "北京",
+    "bannerList": [{
+            "id": "001",
+            "imgUrl": "http://book.tzzown.com/mockimg/banner1.jpg"
+        },
+        {
+            "id": "002",
+            "imgUrl": "http://book.tzzown.com/mockimg/banner2.png"
+        },
+        {
+            "id": "003",
+            "imgUrl": "http://book.tzzown.com/mockimg/banner3.jpg"
+        }
+    ],
+    "iconList": [{
+            "id": 1,
+            "imgUrl": "http://book.tzzown.com/mockimg/icon/1.png",
+            "msg": "联系人"
+        },
+        {
+            "id": 2,
+            "imgUrl": "http://book.tzzown.com/mockimg/icon/2.png",
+            "msg": "coffee"
+        },
+        {
+            "id": 3,
+            "imgUrl": "http://book.tzzown.com/mockimg/icon/3.png",
+            "msg": "家电"
+        },
+        {
+            "id": 4,
+            "imgUrl": "http://book.tzzown.com/mockimg/icon/4.png",
+            "msg": "娱乐"
+        },
+        {
+            "id": 5,
+            "imgUrl": "http://book.tzzown.com/mockimg/icon/5.png",
+            "msg": "音乐"
+        },
+        {
+            "id": 6,
+            "imgUrl": "http://book.tzzown.com/mockimg/icon/6.png",
+            "msg": "问题"
+        },
+        {
+            "id": 7,
+            "imgUrl": "http://book.tzzown.com/mockimg/icon/7.png",
+            "msg": "时间"
+        },
+        {
+            "id": 8,
+            "imgUrl": "http://book.tzzown.com/mockimg/icon/8.png",
+            "msg": "宠物"
+        },
+        {
+            "id": 9,
+            "imgUrl": "http://book.tzzown.com/mockimg/icon/8.png",
+            "msg": "宠物"
+        }, {
+            "id": 10,
+            "imgUrl": "http://book.tzzown.com/mockimg/icon/8.png",
+            "msg": "宠物"
+        }, {
+            "id": 1,
+            "imgUrl": "http://book.tzzown.com/mockimg/icon/1.png",
+            "msg": "联系人"
+        }
+    ],
+    "reList": [{
+            "id": "001",
+            "titleImg": "http://book.tzzown.com/mockimg/title-img.jpg",
+            "title": "水上乐园",
+            "content": "不一样的旅游体验",
+            "price": "98"
+        },
+        {
+            "id": "002",
+            "titleImg": "http://book.tzzown.com/mockimg/title-img.jpg",
+            "title": "水上乐园",
+            "content": "不一样的旅游体验",
+            "price": "98"
+        },
+        {
+            "id": "003",
+            "titleImg": "http://book.tzzown.com/mockimg/title-img.jpg",
+            "title": "水上乐园",
+            "content": "不一样的旅游体验",
+            "price": "98"
+        },
+        {
+            "id": "004",
+            "titleImg": "http://book.tzzown.com/mockimg/title-img.jpg",
+            "title": "水上乐园",
+            "content": "不一样的旅游体验",
+            "price": "98"
+        }
+    ],
+    "itemList": [{
+            "id": "0001",
+            "imgUrl": "http://book.tzzown.com/mockimg/title-img.jpg",
+            "title": "水乡乐园",
+            "con": "大连连云港大连连云港大连云港大连连云港大连连云港"
+        },
+        {
+            "id": "0002",
+            "imgUrl": "http://book.tzzown.com/mockimg/title-img.jpg",
+            "title": "水乡乐园",
+            "con": "大连连云港大连连云港大连云港大连连云港大连连云港"
+        },
+        {
+            "id": "0003",
+            "imgUrl": "http://book.tzzown.com/mockimg/title-img.jpg",
+            "title": "水乡乐园",
+            "con": "大连连云港大连连云港大连云港大连连云港大连连云港"
+        },
+        {
+            "id": "0004",
+            "imgUrl": "http://book.tzzown.com/mockimg/title-img.jpg",
+            "title": "水乡乐园",
+            "con": "大连连云港大连连云港大连云港大连连云港大连连云港"
+        }
+    ]
+}
