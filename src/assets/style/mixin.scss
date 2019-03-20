@@ -1,0 +1,19 @@
+@mixin ellips {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+@mixin obj-title {
+    // text-indent: 1em;
+    // font-size: 0.32rem;
+    // background: #f2f2f2;
+    // padding: .2rem 0;
+    // font-weight: bold;
+    margin-top: 0.2rem;
+    text-indent: 1em;
+    font-size: 0.45rem;
+    background: #f2f2f2;
+    padding: 0.4rem 0;
+    font-weight: bold;
+}
