@@ -12,54 +12,27 @@
       <div class="area">
         <div class="title border-topbottom">热门城市</div>
         <div class="button-list clearfix">
-          <div class="button-wraper">
-            <div class="button">北京</div>
-          </div>
-          <div class="button-wraper">
-            <div class="button">北京</div>
-          </div>
-          <div class="button-wraper">
-            <div class="button">北京</div>
-          </div>
-          <div class="button-wraper">
-            <div class="button">北京</div>
-          </div>
-          <div class="button-wraper">
-            <div class="button">北京</div>
-          </div>
-          <div class="button-wraper">
-            <div class="button">北京</div>
-          </div>
-          <div class="button-wraper">
-            <div class="button">北京</div>
+          <div
+            class="button-wraper"
+            v-for="(item,index) in hotCity"
+            :key="index"
+            :id="item.id"
+            :spall="item.spell"
+          >
+            <div class="button">{{item.name}}</div>
           </div>
         </div>
       </div>
-      <div class="area">
-        <div class="title border-topbottom">A</div>
+      <div class="area" v-for="(citys,indexC) in citys" :key="indexC">
+        <div class="title border-topbottom">{{indexC}}</div>
         <ul class="item-list">
-          <li class="item border-topbottom">北京</li>
-          <li class="item border-topbottom">北京</li>
-          <li class="item border-topbottom">北京</li>
-          <li class="item border-topbottom">北京</li>
-        </ul>
-      </div>
-      <div class="area">
-        <div class="title border-topbottom">A</div>
-        <ul class="item-list">
-          <li class="item border-topbottom">北京</li>
-          <li class="item border-topbottom">北京</li>
-          <li class="item border-topbottom">北京</li>
-          <li class="item border-topbottom">北京</li>
-        </ul>
-      </div>
-      <div class="area">
-        <div class="title border-topbottom">A</div>
-        <ul class="item-list">
-          <li class="item border-topbottom">北京</li>
-          <li class="item border-topbottom">北京</li>
-          <li class="item border-topbottom">北京</li>
-          <li class="item border-topbottom">北京</li>
+          <li
+            class="item border-topbottom"
+            v-for="(itemCity,indexItem) in citys"
+            :key="indexItem"
+            :id="itemCity.id"
+            :spell="itemCity.spell"
+          >{{itemCity.name}}</li>
         </ul>
       </div>
     </div>
@@ -69,6 +42,10 @@
 import BScroll from "better-scroll";
 export default {
   name: "CityList",
+  props: {
+    hotCity: Array,
+    citys: Object
+  },
   mounted() {
     this.scroll = new BScroll(this.$refs.wrapper);
   }
