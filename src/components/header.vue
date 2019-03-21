@@ -8,25 +8,27 @@
       <span>请输入城市/景点/游玩主题</span>
     </div>
     <router-link to="/city">
-      <div class="arrow">
-        {{this.city}}
+      <div class="arrow clearfix">
+        <span class="citycon">{{this.city}}</span>
         <span class="iconfont">&#xe615;</span>
       </div>
     </router-link>
   </div>
 </template>
 <script>
+import { mapState } from "vuex";
 export default {
-  props: {
-    city: String
-  },
   data() {
     return {};
+  },
+  computed: {
+    ...mapState(["city"])
   }
 };
 </script>
 <style scoped lang="scss">
 @import "../assets/style/varibles.scss";
+@import "../assets/style/mixin.scss";
 .header-box {
   width: 100%;
   height: 0.86rem;
@@ -74,8 +76,16 @@ export default {
     font-size: 0.3rem;
     text-align: center;
     color: #fff;
+    margin-left: 0.2rem;
+    .citycon {
+      display: inline-block;
+      width: 1rem;
+      @include ellips;
+      float: left;
+    }
     .iconfont {
       font-size: 0.25rem;
+      float: left;
     }
   }
 }
