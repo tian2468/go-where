@@ -32,7 +32,7 @@ export default {
     return {
       touchStatus: false,
       startY: 0,
-      timer: true
+      timer: null
     };
   },
   updated() {
