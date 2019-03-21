@@ -2,8 +2,8 @@
   <div>
     <city-header></city-header>
     <city-search></city-search>
-    <city-list :hotCity="hotCity" :citys="citys"></city-list>
-    <city-Aiphabet :citys="citys"></city-Aiphabet>
+    <city-list :hotCity="hotCity" :citys="citys" :letter="letter"></city-list>
+    <city-Aiphabet :citys="citys" @change="handChanges"></city-Aiphabet>
   </div>
 </template>
 <script>
@@ -23,7 +23,8 @@ export default {
   data() {
     return {
       hotCity: [],
-      citys: {}
+      citys: {},
+      letter: ""
     };
   },
   methods: {
@@ -37,6 +38,10 @@ export default {
           console.log(this.citys);
         })
         .catch(() => {});
+    },
+    handChanges(letter) {
+      // console.log(letter);
+      this.letter = letter;
     }
   },
   mounted() {
