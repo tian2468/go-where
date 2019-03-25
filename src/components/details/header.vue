@@ -31,18 +31,22 @@ export default {
     },
     handleScroll() {
       let scrollTop = document.body.scrollTop;
-      if (scrollTop > 60) {
-        this.showAbs = true;
-        let opacity = scrollTop / 100;
-        opacity = opacity > 1 ? 1 : opacity;
-        this.opacityStyle = { opacity };
-      } else {
-        this.showAbs = false;
-      }
+        if (scrollTop > 60) {
+          this.showAbs = true;
+          let opacity = scrollTop / 100;
+          opacity = opacity > 1 ? 1 : opacity;
+          this.opacityStyle = { opacity };
+        } else {
+          this.showAbs = false;
+        }
+    //   console.log(scrollTop);
     }
   },
-  mounted() {
+  activated() {
     window.addEventListener("scroll", this.handleScroll, true);
+  },
+  deactivated() {
+    window.removeEventListener("scroll", this.handleScroll, true);
   }
 };
 </script>
