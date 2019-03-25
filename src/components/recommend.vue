@@ -2,7 +2,13 @@
   <div>
     <h3 class="title">热门推荐</h3>
     <ul class="recommend-box">
-      <li class="recommend-item" v-for="(item,index) in reList" :key="index" :id="item.id">
+      <li
+        class="recommend-item"
+        v-for="(item,index) in reList"
+        :key="index"
+        :id="item.id"
+        @click="details(item.id)"
+      >
         <img class="recommend-item-img" :src="item.titleImg" alt>
         <div class="recommend-con">
           <p class="recommend-con-title">{{item.title}}</p>
@@ -28,7 +34,11 @@ export default {
       msg: ""
     };
   },
-  methods: {},
+  methods: {
+    details(id) {
+      this.$router.push("./details?id=" + id);
+    }
+  },
   mounted() {
     // this.axios
     //   .get("http://t.weather.sojson.com/api/weather/city/101030100")

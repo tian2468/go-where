@@ -1,9 +1,10 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/"></router-link>
+      <keep-alive>
+        <router-view/>
+      </keep-alive>
     </div>
-    <router-view/>
   </div>
 </template>
 

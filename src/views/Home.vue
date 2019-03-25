@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <header-box :city="city"></header-box>
+    <header-box></header-box>
     <home-swiper :bannerList="bannerList"></home-swiper>
     <home-icons :iconList="iconList"></home-icons>
     <home-recommend :reList="reList"></home-recommend>
@@ -16,6 +16,7 @@ import HomeIcons from "../components/icons";
 import HomeRecommend from "../components/recommend";
 import HomeWeeken from "../components/weeken";
 import axios from "axios";
+import { mapState } from "vuex";
 export default {
   name: "home",
   components: {
@@ -27,27 +28,29 @@ export default {
   },
   data() {
     return {
-      city: "",
       bannerList: [],
       iconList: [],
       reList: [],
-      itemList: []
+      itemList: [],
+      lastCity: ""
     };
+  },
+  computed: {
+    ...mapState(["city"])
   },
   methods: {
     getHomeInfo() {
       axios
-        .get("api/index.json")
+        .get("api/index.json?city=" + this.city)
         .then(res => {
           // console.log(res);
           // let res = res.data;
           let data = res.data;
-          this.city = data.city;
           this.bannerList = data.bannerList;
           this.iconList = data.iconList;
           this.reList = data.reList;
           this.itemList = data.itemList;
-          console.log(this.itemList);
+          // console.log(this.itemList);
         })
         .catch(err => {
           console.log(err);
@@ -55,7 +58,14 @@ export default {
     }
   },
   mounted() {
+    this.lastCity = this.city;
     this.getHomeInfo();
+  },
+  activated() {
+    if (this.city !== this.lastCity) {
+      this.lastCity = this.city;
+      this.getHomeInfo();
+    }
   }
 };
 </script>

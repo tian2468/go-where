@@ -11,7 +11,7 @@
 <script>
 export default {
   props: {
-    city: String
+    // city: String
   },
   data() {
     return {};

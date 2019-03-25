@@ -5,7 +5,12 @@
     </div>
     <div class="search-content" ref="wrapper" v-show="isA">
       <ul>
-        <li class="item" v-for="(item,index) in list" :key="index">{{item.name}}</li>
+        <li
+          class="item"
+          v-for="(item,index) in list"
+          :key="index"
+          @click="handCityClick(item.name)"
+        >{{item.name}}</li>
         <li class="item tips" v-show="hasNoData">没有找到匹配数据</li>
       </ul>
     </div>
@@ -55,6 +60,12 @@ export default {
         }
         this.list = result;
       }
+    }
+  },
+  methods: {
+    handCityClick(city) {
+      this.$store.commit("changeCity", city);
+      this.$router.push("/");
     }
   }
 };

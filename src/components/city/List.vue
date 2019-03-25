@@ -5,7 +5,7 @@
         <div class="title border-topbottom">当前城市</div>
         <div class="button-list clearfix">
           <div class="button-wraper">
-            <div class="button">{{this.currentCity}}</div>
+            <div class="button">{{this.city}}</div>
           </div>
         </div>
       </div>
@@ -67,12 +67,10 @@ export default {
       this.$router.push("/");
       // alert(city);
     },
-    ...mapMutations(['changeCity'])
+    ...mapMutations(["changeCity"])
   },
   computed: {
-    ...mapState({
-      currentCity: "city"
-    })
+    ...mapState(["city"])
   }
 };
 </script>
